@@ -10,4 +10,4 @@ RUN git clone https://github.com/ianmiell/pgcharts
 WORKDIR /opt/pgcharts
 RUN shutit build --delivery dockerfile
 
-CMD ["/bin/bash"]
+CMD ["sleep infinity"]
