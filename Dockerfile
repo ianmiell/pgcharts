@@ -10,4 +10,7 @@ RUN git clone https://github.com/ianmiell/pgcharts
 WORKDIR /opt/pgcharts
 RUN shutit build --delivery dockerfile
 
+# Required to allow Cloudbees plugin to work - see: https://zwischenzugs.wordpress.com/?p=1283
+RUN mkdir -p /var/jenkins_home/jobs/docker-test/workspace
+
 CMD ["sleep infinity"]
